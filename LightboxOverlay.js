@@ -200,7 +200,7 @@ var LightboxOverlay = React.createClass({
       )
     )}</Animated.View>);
     var content = (
-      <Animated.View style={[openStyle, dragStyle]} {...handlers}>
+      <Animated.View style={[openStyle, dragStyle, lightboxOpacityStyle]} {...handlers}>
         {this.props.children}
       </Animated.View>
     );
