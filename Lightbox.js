@@ -8,6 +8,7 @@ var {
   PropTypes,
   View,
   TouchableHighlight,
+  TouchableOpacity,
   Animated,
   Children,
   cloneElement,
@@ -137,12 +138,12 @@ var Lightbox = React.createClass({
         onLayout={() => {}}
       >
         <Animated.View>
-          <TouchableHighlight
+          <TouchableOpacity
             underlayColor={this.props.underlayColor}
             onPress={this.open}
           >
             {this.props.children}
-          </TouchableHighlight>
+          </TouchableOpacity>
         </Animated.View>
         {this.props.navigator ? false : <LightboxOverlay {...this.getOverlayProps()} />}
       </View>
